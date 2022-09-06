@@ -1,19 +1,19 @@
-import { addProduct, removeProduct } from "./types";
+// import updateLocalStorage from "../helpers/updateLocalStorage"
 
-export function cartReducer(prevState = [], { type, payload }) {
-  switch (type) {
-    case addProduct:
-      return [...prevState, payload];
-    case removeProduct:
-      return prevState.filter((el) => el.id !== payload);
-    default:
-      return prevState;
-  }
-}
 
-export function filterCartReducer(prevstate = "", { type, payload }) {
-  switch (type) {
-    default:
-      return prevstate;
-  }
+export const reducer = (state = {
+    counter: 0,
+}, action) => {
+    switch (action.type) {
+        case "counterPlus":
+            const counterPlus = state.counter + 1
+            // updateLocalStorage(counterPlus)
+            return { counter: counterPlus }
+        case "counterMinus":
+            const counter = state.counter - 1
+            // updateLocalStorage(counter)
+            return { counter }
+
+        default: return state
+    }
 }
