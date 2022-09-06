@@ -19,18 +19,24 @@ code {
   margin: 50px auto;
   border: 2px solid blue;
   justify-content: center;
-  width: 350px;
+  width: 450px;
   text-align: center;
   align-items: center;
-  height: 100px;
+  height: 150px;
 }
 
 span {
   font-size: 30px;
 }
 button {
-  height: 25px;
-  padding: 0 20px;
+  display: inline-block;
+  padding: 5px 20px;
   text-align: center;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+p{
+  margin-right: -15px;
   font-size: 20px;
 }

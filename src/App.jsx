@@ -32,6 +32,7 @@ function App() {
     <div className="wrapper">
       <button type="button" onClick={ counterPlus }>Plus</button>
       <button type="button" onClick={ counterMinus }>Minus</button>
+      <p>Count:</p>
       <span>{ counter }</span>
     </div>
   );
