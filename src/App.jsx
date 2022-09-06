@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import updateLocalStorage from "./helpers/updateLocalStorage";
 import "./App.css";
@@ -29,11 +29,11 @@ function App() {
   }
 
   return (
-    <>
+    <div className="wrapper">
       <button type="button" onClick={ counterPlus }>Plus</button>
       <button type="button" onClick={ counterMinus }>Minus</button>
-      <div>{ counter }</div>
-    </>
+      <span>{ counter }</span>
+    </div>
   );
 }
 
