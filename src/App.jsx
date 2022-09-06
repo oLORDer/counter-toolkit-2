@@ -1,39 +1,35 @@
 // import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import updateLocalStorage from "./helpers/updateLocalStorage";
-import "./App.css";
+import { useDispatch, useSelector } from 'react-redux';
+import updateLocalStorage from './helpers/updateLocalStorage';
+import { increment, decrement } from './redux/toolkit/slice';
+
+import './App.css';
 
 function App() {
   const { counter } = useSelector((state) => {
-    updateLocalStorage(state.counter)
-    return state
-  })
-  const dispatch = useDispatch()
-
-  // useEffect(() => {
-  //   updateLocalStorage(counter)
-  // }, [counter])
-
-
-
+    updateLocalStorage(state.counter);
+    return state;
+  });
+  const dispatch = useDispatch();
+  console.log(increment, decrement);
   function counterPlus() {
-    dispatch({
-      type: "counterPlus"
-    })
+    dispatch(increment());
   }
 
   function counterMinus() {
-    dispatch({
-      type: "counterMinus"
-    })
+    dispatch(decrement());
   }
 
   return (
     <div className="container">
-      <button type="button" onClick={ counterPlus }>Plus</button>
-      <button type="button" onClick={ counterMinus }>Minus</button>
+      <button type="button" onClick={counterPlus}>
+        Plus
+      </button>
+      <button type="button" onClick={counterMinus}>
+        Minus
+      </button>
       <p>Count:</p>
-      <span>{ counter }</span>
+      <span>{counter}</span>
     </div>
   );
 }
