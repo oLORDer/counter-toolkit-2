@@ -29,7 +29,7 @@ function App() {
   }
 
   return (
-    <div className="wrapper">
+    <div className="container">
       <button type="button" onClick={ counterPlus }>Plus</button>
       <button type="button" onClick={ counterMinus }>Minus</button>
       <p>Count:</p>

@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(176, 170, 170);
 }
 
 code {
@@ -12,17 +13,18 @@ code {
     monospace;
 }
 
-.wrapper {
+.container {
   display: flex;
   gap: 30px;
   margin-top: 10px;
-  margin: 50px auto;
-  border: 2px solid blue;
+  margin: 70px auto;
+  border: 5px solid rgb(0, 0, 0);
   justify-content: center;
   width: 450px;
   text-align: center;
   align-items: center;
-  height: 150px;
+  height: 170px;
+  background-color: #fff;
 }
 
 span {
@@ -36,7 +38,7 @@ button {
   border-radius: 5px;
 }
 
-p{
+p {
   margin-right: -15px;
   font-size: 20px;
 }
